@@ -2,3 +2,13 @@
 Why do you need to do it?
 A .git directory is created which will store all
 the metadata for your repository.
+
+2. How is the staging area different from the 
+working directory and the repository? What 
+value do you think it offers?
+The staging area contains only what you want
+to commit to the repository from your working
+directory in your next commit. It is valueable
+as it allows you to keep files in your working
+directory but outside of your repository if 
+those files are not ready to be comitted.
