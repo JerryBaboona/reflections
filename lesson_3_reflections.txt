@@ -2,3 +2,20 @@ When would you want to use a remote repository rather than keeping all your work
 Using a remote repository is useful if you are working from multiple computers, because 
 then you can access your repo from any of them, or if you are collaborating with others
 as they will be able to access the repo and make changes from their own machines.
+
+Commands:
+git add remote remonte_name url
+Adds a remote link to your repository.
+The url is the url of your repo on github.
+Once this is done you can push your commits
+up to your github repository.
+
+git push remote branch
+This command pushes the branch "branch" up
+to the chosen remote. Note that when pushing
+changes to your remote you do it in terms of
+branches, rather than individual commits.
+
+git pull remote branch
+This command pulls down the chosen branch 
+from remote on github.
