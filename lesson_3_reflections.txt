@@ -44,3 +44,27 @@ remote github account. The forked repo is just like a clone of the original,
 but it will also have a link back to the original work. You would fork a repo
 when you want to work on / change a repo made by someone else, but where you
 aren't a collaborator so cannot change the original repo.
+
+4. What is the benefit of having a copy of the last known state
+of the remote stored locally?
+Keeps you as up to date as possible with the remote repo if you're
+going offline you can still add changes to the most recent version
+of the branch. When you come back online this makes it easier to see
+what changes others have made while you were offline, and you can
+merge your changes with theirs.
+
+A pull request allows you to get people to review your changes before 
+merging those changes into the master. You create a new branch with 
+some change, then commit and push up to the remote repo. Once there,
+you can make a pull request - this will email the owner of the repo
+about the pull request. The owner can then review the code of your
+new branch, and then if they think it is ready to go, they can pull
+it into the master.
+
+5. How would you collaborate without using Git or GitHub? What would be
+easier, and what would be harder?
+Without git and github I would probably share my code with collaborators
+using a drop box or sending code versions by email. This would be easier to
+set up and learn (since there basically is no setup / learning involved!)
+but it would be much harder to keep track of changes and merge different
+peoples work.
