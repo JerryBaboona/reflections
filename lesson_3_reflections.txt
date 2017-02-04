@@ -68,3 +68,15 @@ using a drop box or sending code versions by email. This would be easier to
 set up and learn (since there basically is no setup / learning involved!)
 but it would be much harder to keep track of changes and merge different
 peoples work.
+
+6. When would you want to make changes in a seperate branch rather than
+directly in master? What benefits does each approach have?
+Working in a seperate branch can be helpful if the features you're building
+are new / experimental / not stable yet. Working in a seperate branch you
+can get these up to standard first before merging them into the master 
+branch which is ostensibly production level. The advantage of this is that 
+you can experiment and if things go wrong, they dont affect the master, which 
+other collaborators may be working on. 
+Working directly on the master has the benefit of meaning that all of your code
+is as up to date as possible, and has all of the features that may have
+been added since a branch was started.
