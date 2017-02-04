@@ -12,3 +12,89 @@ directory in your next commit. It is valueable
 as it allows you to keep files in your working
 directory but outside of your repository if 
 those files are not ready to be comitted.
+
+"git diff" with no arguments displays the difference
+between the current working directory and the 
+staging area (to which you add files before 
+committing changes).
+
+"git diff --staged" displays the differences 
+between the staging area and the repository.
+This is a useful command before committing
+to check that files that you've added to the 
+staging area are what you want to commit
+to the repository.
+
+"git reset --hard" discards any changes in the
+working directory or staging area. BE VERY CAREFUL
+WHEN RUNNING THIS COMMAND - this command is not
+reversable.
+
+3. How can you use the staging area to make sure
+you have one commit per logical change?
+By adding your files tot he staging area and then
+running "git diff --staged" before commiting, you
+can see all the changes that your commit will 
+contain, and thereby decide if this commit (group
+of changes to one or more files) constitutes one
+logical change in your codebase.
+
+4. What are some situations where branches would
+be helpful in keeping your history organised? How
+would branches help?
+Branches would be useful when you want to try a 
+different approach or add a new functionality. 
+For instance using threads or not using threads.
+You could have one branch that uses threading 
+and one that didn't, and progress these branches
+separately. You could then test both branches and
+see which works best, and continue that developing
+that branch. Your master branch would be your
+production branch, it always works and is stable.
+You could then add a feature branch, or an
+experimental branch - these may not be as stable,
+they are for testing things out.
+
+5. How do the diagrams help you visualize the branch
+structure?
+Using the command git log --graph --oneline you can 
+see a simple branch map of your repository. This is
+a good place to start for drawing your own repo
+branch diagram. Drawing branch diagrams can help
+you visualise the repo and understand which commits
+may be unreachable. 
+
+If you are in an unreachable (detached HEAD STATE)
+commit, but you decide you want to retain the currently
+unreachable commit by creating a new branch, you can
+use the command git checkout -b new_branch_name while
+the unreachable commit is checked out and you will 
+create a new branch for that commit.
+
+The command git show commitID shows the difference 
+between the chosen commit, and its parent. This is useful
+if you have merged to branches, where commits can
+become interleaved in the git log, so it is not
+always clear which commit is the parent of the one
+you're looking at.
+
+6. What is the result of merging two branches together?
+Why do we represent it in the diagram the way we do?
+Merging to branches together brings all the changes 
+in a branch into another branch, so the features / changes
+of the two branches are combined into a single branch.
+
+7. What are the pros and cons of Git's automatic merging
+vs. always doing merges manually?
+Automatic merging saves time and energy manually looking
+through commits of two different branches, checking for
+changes and differences and combining them into one 
+coherent file. However, Git's automatic merging is 
+limited by it's simplicity of how it merges - it can't
+read the code, so it can't tell if the files you are 
+merging will make sense once merged - the user still has
+to do that. It will raise conflicts, but it could 
+miss redundancies in the code where two branches have
+essentially the same function / content written in
+different places.
+ 
