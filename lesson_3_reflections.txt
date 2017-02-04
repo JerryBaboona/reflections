@@ -1,4 +1,4 @@
-When would you want to use a remote repository rather than keeping all your work local?
+1. When would you want to use a remote repository rather than keeping all your work local?
 Using a remote repository is useful if you are working from multiple computers, because 
 then you can access your repo from any of them, or if you are collaborating with others
 as they will be able to access the repo and make changes from their own machines.
@@ -19,3 +19,28 @@ branches, rather than individual commits.
 git pull remote branch
 This command pulls down the chosen branch 
 from remote on github.
+
+2. Why might you want to always pull changes manually rather than having Git
+automatically stay up to date with your remote repository?
+Your remote repository may have additions / changes by other contributors
+that you don't want to include in your commit, so you don't want it to 
+be getting constantly updated with changes while you're working on it.
+
+3. Describe the differences between forks, clones and branches. When
+would you use one instead of the other?
+Branch: branches exist within a repository. They are seperate chains
+of commits. Branches are used to experiment, add new features, change functionalities
+etc from the master branch, which is like your always stable, always working
+production branch. You can merge branches together to combine the changes
+and commit histories of your branches.
+
+Clone: a clone is a copy of a repository. You can clone a remote repository
+onto your local machine, or clone a local repository to somewhere else on your
+machine. You would clone a repository when you want to contribute / make changes
+to that repo and have it stored locally on your machine.
+
+Fork: a fork is a remotely cloned repo - i.e. you clone a remote repo onto your
+remote github account. The forked repo is just like a clone of the original, 
+but it will also have a link back to the original work. You would fork a repo
+when you want to work on / change a repo made by someone else, but where you
+aren't a collaborator so cannot change the original repo.
